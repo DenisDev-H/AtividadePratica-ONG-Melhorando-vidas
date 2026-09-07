@@ -42,3 +42,36 @@
     height: 50px;        /* Ajuste a altura para o tamanho que achar melhor */
     width: auto;         /* Mantém a proporção da imagem */
 }
+
+.container-projeto {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.titulo-projeto {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 15px;
+}
+
+.bloco-projeto {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.bloco-projeto h2 {
+    color: #218838;
+    margin-bottom: 10px;
+}
+
+.bloco-projeto ul, .bloco-projeto ol {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.bloco-projeto li {
+    margin-bottom: 5px;
+}
