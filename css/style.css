@@ -29,3 +29,16 @@
 .botao-projetos:hover {
     background-color: #138496; /* Azul um pouco mais escuro */
 }
+
+/* Alinha a imagem, o título e o endereço na mesma linha/bloco */
+.logotipo {
+    display: flex;
+    align-items: center; /* Alinha o texto verticalmente com o meio da imagem */
+    gap: 15px;           /* Cria um espaço de 15px entre a imagem e o texto */
+}
+
+/* Opcional: Garanta que a imagem não fique gigante na tela */
+.logotipo img {
+    height: 50px;        /* Ajuste a altura para o tamanho que achar melhor */
+    width: auto;         /* Mantém a proporção da imagem */
+}
