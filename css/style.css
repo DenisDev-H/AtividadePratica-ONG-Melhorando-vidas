@@ -1,0 +1,31 @@
+.botao-cadastro {
+    display: inline-block;
+    padding: 10px 20px;       /* Espaçamento interno (altura e largura) */
+    background-color: #28a745; /* Cor de fundo (verde, por exemplo) */
+    color: white;              /* Cor do texto */
+    text-decoration: none;     /* Remove o sublinhado padrão do link */
+    border-radius: 5px;        /* Deixa as bordas arredondadas */
+    font-weight: bold;         /* Deixa o texto em negrito */
+    transition: background 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Mudar a cor quando o usuário passar o mouse por cima */
+.botao-cadastro:hover {
+    background-color: #218838; /* Verde um pouco mais escuro */
+}
+
+.botao-projetos {
+    display: inline-block;
+    padding: 10px 20px;       /* Espaçamento interno (altura e largura) */
+    background-color: #17a2b8; /* Cor de fundo (azul, por exemplo) */
+    color: white;              /* Cor do texto */
+    text-decoration: none;     /* Remove o sublinhado padrão do link */
+    border-radius: 5px;        /* Deixa as bordas arredondadas */
+    font-weight: bold;         /* Deixa o texto em negrito */
+    transition: background 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Mudar a cor quando o usuário passar o mouse por cima */
+.botao-projetos:hover {
+    background-color: #138496; /* Azul um pouco mais escuro */
+}
