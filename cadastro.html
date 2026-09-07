@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro na ONG Melhorando Vidas</title>
+</head>
+<body>
+    <section> 
+        <form action="" method="get" id="cadastro">
+            <fieldset>
+                <legend>Formulário de Dados</legend>
+            <h2>Cadastro</h2>
+            <label for="CPF">CPF:</label>
+            <input type="text" id="CPF" name="CPF" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" required>
+            <br>
+            <br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" placeholder="(00) 00000-0000" required>
+            <br>
+            <br>
+            <label for="CEP">CEP:</label>
+            <input type="text" id="CEP" name="CEP" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" required>
+            <br>
+            <br>
+            <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+     </section>
+</body>
+</html>
+ 
