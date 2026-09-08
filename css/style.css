@@ -1,48 +1,93 @@
-.botao-cadastro {
-    display: inline-block;
-    padding: 10px 20px;       /* Espaçamento interno (altura e largura) */
-    background-color: #28a745; /* Cor de fundo (verde, por exemplo) */
-    color: white;              /* Cor do texto */
-    text-decoration: none;     /* Remove o sublinhado padrão do link */
-    border-radius: 5px;        /* Deixa as bordas arredondadas */
-    font-weight: bold;         /* Deixa o texto em negrito */
-    transition: background 0.3s; /* Efeito suave ao passar o mouse */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS, TIPOGRAFIA E RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Mudar a cor quando o usuário passar o mouse por cima */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DO CABEÇALHO E MENU DE NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logotipo img {
+    height: 50px;
+    width: auto;
+}
+
+.contato {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.menu {
+    display: flex;
+    list-style: none; /* Remove as bolinhas pretas da lista */
+    gap: 15px;
+}
+
+/* Base comum para todos os botões do menu (Evita repetição de código) */
+.botao-cadastro, 
+.botao-projetos {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.botao-cadastro {
+    background-color: #28a745;
+}
+
 .botao-cadastro:hover {
-    background-color: #218838; /* Verde um pouco mais escuro */
+    background-color: #218838;
+    transform: translateY(-2px);
 }
 
 .botao-projetos {
-    display: inline-block;
-    padding: 10px 20px;       /* Espaçamento interno (altura e largura) */
-    background-color: #17a2b8; /* Cor de fundo (azul, por exemplo) */
-    color: white;              /* Cor do texto */
-    text-decoration: none;     /* Remove o sublinhado padrão do link */
-    border-radius: 5px;        /* Deixa as bordas arredondadas */
-    font-weight: bold;         /* Deixa o texto em negrito */
-    transition: background 0.3s; /* Efeito suave ao passar o mouse */
+    background-color: #17a2b8;
 }
 
-/* Mudar a cor quando o usuário passar o mouse por cima */
 .botao-projetos:hover {
-    background-color: #138496; /* Azul um pouco mais escuro */
+    background-color: #138496;
+    transform: translateY(-2px);
 }
 
-/* Alinha a imagem, o título e o endereço na mesma linha/bloco */
-.logotipo {
-    display: flex;
-    align-items: center; /* Alinha o texto verticalmente com o meio da imagem */
-    gap: 15px;           /* Cria um espaço de 15px entre a imagem e o texto */
-}
-
-/* Opcional: Garanta que a imagem não fique gigante na tela */
-.logotipo img {
-    height: 50px;        /* Ajuste a altura para o tamanho que achar melhor */
-    width: auto;         /* Mantém a proporção da imagem */
-}
-
+/* ==========================================================================
+   3. PÁGINA DE DETALHES DO PROJETO (projetos.html)
+   ========================================================================== */
 .container-projeto {
     max-width: 800px;
     margin: 40px auto;
@@ -67,7 +112,8 @@
     margin-bottom: 10px;
 }
 
-.bloco-projeto ul, .bloco-projeto ol {
+.bloco-projeto ul, 
+.bloco-projeto ol {
     padding-left: 20px;
     margin-top: 5px;
 }
@@ -75,7 +121,10 @@
 .bloco-projeto li {
     margin-bottom: 5px;
 }
-/* Container da Galeria */
+
+/* ==========================================================================
+   4. GALERIA DE FOTOS DO PROJETO
+   ========================================================================== */
 .galeria-fotos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -83,7 +132,6 @@
     margin-top: 15px;
 }
 
-/* Caixa de cada foto individual */
 .item-galeria {
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -91,35 +139,6 @@
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     text-align: center;
-}
-
-/* Configurações da Imagem */
-.item-galeria img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-/* Legenda abaixo da foto */
-.legenda-foto {
-    font-size: 0.9rem;
-    color: #666;
-    font-style: italic;
-    margin: 5px 0 0 0;
-}
-/* Efeito de aproximação na foto */
-.item-galeria img {
-    transition: transform 0.3s ease;
-}
-
-.item-galeria:hover img {
-    transform: scale(1.03); /* Aproxima a imagem levemente */
-}
-
-/* Leve sombra na caixa ao passar o mouse */
-.item-galeria {
     transition: box-shadow 0.3s ease;
 }
 
@@ -127,3 +146,22 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
+.item-galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.03);
+}
+
+.legenda-foto {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
