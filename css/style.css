@@ -165,3 +165,80 @@ nav {
     font-style: italic;
     margin: 5px 0 0 0;
 }
+/* ==========================================================================
+   5. PÁGINA DE AGRADECIMENTO (Obrigado.html)
+   ========================================================================== */
+.container-obrigado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Centraliza verticalmente na tela */
+    padding: 20px;
+}
+
+.card-obrigado {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.icone-sucesso {
+    background-color: #28a745;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+}
+
+.card-obrigado h1 {
+    color: #1e3d59;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-obrigado p {
+    color: #666666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Estilo do botão de voltar */
+.botao-voltar {
+    display: inline-block;
+    background-color: #1e3d59;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.botao-voltar:hover {
+    background-color: #132638;
+    transform: translateY(-2px);
+}
+
+/* Link simples extra para ajustar o menu do topo */
+.botao-menu-home {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1e3d59;
+}
+.botao-menu-home:hover {
+    color: #007bff;
+}
+
