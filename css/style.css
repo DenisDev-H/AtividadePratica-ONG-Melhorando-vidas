@@ -1,3 +1,29 @@
+:root {
+    /* Paleta de Cores (8 Cores Distintas) */
+    --cor-primaria: #1e3d59;       /* Azul institucional (Confiança e seriedade) */
+    --cor-secundaria: #17a2b8;     /* Turquesa/Azul piscina moderno (Interatividade) */
+    --cor-sucesso: #28a745;        /* Verde sucesso para o Cadastro */
+    --cor-sucesso-hover: #218838;  /* Verde escuro para estado ativo/hover */
+    --cor-texto-escuro: #333333;   /* Cinza grafite (Contraste ergonômico) */
+    --cor-texto-claro: #ffffff;    /* Branco puro para textos sobre fundos escuros */
+    --cor-fundo-leve: #f8f9fa;     /* Cinza ultra claro para background geral */
+    --cor-borda: #e9ecef;          /* Cinza claro para divisórias e inputs */
+
+    /* Escala Tipográfica (5 Patamares Hierárquicos) */
+    --fonte-titulo-lg: 2.5rem;     /* 40px - H1 institucional da Home */
+    --fonte-titulo-md: 1.8rem;     /* 288px - H1 do Card Obrigado */
+    --fonte-subtitulo: 1.5rem;     /* 24px - H2 das seções do projeto */
+    --fonte-corpo: 1.0rem;         /* 16px - Parágrafos e labels de formulário */
+    --fonte-suporte: 0.9rem;       /* 14.4px - Legendas de fotos e rodapé */
+
+    /* Escala de Espaçamentos Modulares (Escala Estrita) */
+    --espaco-xs: 5px;              /* Ajustes finos de margem */
+    --espaco-sm: 10px;             /* Padding interno de botões e inputs */
+    --espaco-md: 15px;             /* Gap entre logotipo/título e flexbox */
+    --espaco-lg: 20px;             /* Gap da grid de fotos e padding do header */
+    --espaco-xl: 40px;             /* Margens externas e distanciamento de seções */
+}
+
 /* ==========================================================================
    1. CONFIGURAÇÕES GERAIS, TIPOGRAFIA E RESET
    ========================================================================== */
@@ -9,8 +35,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333333;
+    background-color: var(--cor-fundo-leve);
+    color: var(--cor-texto-escuro);
     line-height: 1.6;
 }
 
@@ -18,7 +44,7 @@ body {
    2. ESTRUTURA DO CABEÇALHO E MENU DE NAVEGAÇÃO
    ========================================================================== */
 header {
-    background-color: #ffffff;
+    background-color: var(--cor-fundo-leve);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 20px 40px;
 }
@@ -46,7 +72,7 @@ nav {
 
 .contato {
     font-size: 0.9rem;
-    color: #666666;
+    color: var(--cor-texto-claro);
 }
 
 .menu {
@@ -68,20 +94,20 @@ nav {
 }
 
 .botao-cadastro {
-    background-color: #28a745;
+    background-color: var(--cor-sucesso);
 }
 
 .botao-cadastro:hover {
-    background-color: #218838;
+    background-color: var(--cor-sucesso-hover);
     transform: translateY(-2px);
 }
 
 .botao-projetos {
-    background-color: #17a2b8;
+    background-color: var(--cor-secundaria);
 }
 
 .botao-projetos:hover {
-    background-color: #138496;
+    background-color: var(--cor-secundaria-hover);
     transform: translateY(-2px);
 }
 
@@ -93,12 +119,12 @@ nav {
     margin: 40px auto;
     padding: 0 20px;
     font-family: 'Inter', sans-serif;
-    color: #333;
+    color: var(--cor-texto-escuro);
 }
 
 .titulo-projeto {
     margin-bottom: 30px;
-    border-bottom: 2px solid #28a745;
+    border-bottom: 2px solid var(--cor-sucesso);
     padding-bottom: 15px;
 }
 
@@ -108,7 +134,7 @@ nav {
 }
 
 .bloco-projeto h2 {
-    color: #218838;
+    color: var(--cor-sucesso);
     margin-bottom: 10px;
 }
 
@@ -133,8 +159,8 @@ nav {
 }
 
 .item-galeria {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background-color: var(--cor-fundo-leve);
+    border: 1px solid var(--cor-borda);
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -177,7 +203,7 @@ nav {
 }
 
 .card-obrigado {
-    background-color: #ffffff;
+    background-color: var(--cor-fundo-leve);
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     padding: 40px 30px;
@@ -187,7 +213,7 @@ nav {
 }
 
 .icone-sucesso {
-    background-color: #28a745;
+    background-color: var(--cor-sucesso);
     color: white;
     width: 60px;
     height: 60px;
@@ -201,13 +227,13 @@ nav {
 }
 
 .card-obrigado h1 {
-    color: #1e3d59;
+    color: var(--cor-texto-escuro);
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
 .card-obrigado p {
-    color: #666666;
+    color: var(--cor-texto-claro);
     font-size: 1rem;
     margin-bottom: 30px;
 }
@@ -215,7 +241,7 @@ nav {
 /* Estilo do botão de voltar */
 .botao-voltar {
     display: inline-block;
-    background-color: #1e3d59;
+    background-color: var(--cor-secundaria);
     color: white;
     padding: 12px 30px;
     text-decoration: none;
@@ -226,7 +252,7 @@ nav {
 }
 
 .botao-voltar:hover {
-    background-color: #132638;
+    background-color: var(--cor-secundaria-hover);
     transform: translateY(-2px);
 }
 
@@ -236,9 +262,9 @@ nav {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-    color: #1e3d59;
+    color: var(--cor-texto-escuro);
 }
 .botao-menu-home:hover {
-    color: #007bff;
+    color: var(--cor-secundaria);
 }
 
