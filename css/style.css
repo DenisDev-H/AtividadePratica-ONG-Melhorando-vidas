@@ -267,4 +267,53 @@ nav {
 .botao-menu-home:hover {
     color: var(--cor-secundaria);
 }
+/* CONTEXTO MACROSCÓPICO: GRID DE 12 COLUNAS */
+.container-grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* MAPEAMENTO DOS COMPONENTES INSTITUCIONAIS */
+header, footer { grid-column: span 12; }
+.sidebar { grid-column: span 3; }
+.main-content { grid-column: span 9; }
+.card-full { grid-column: span 12; }
+.card-half { grid-column: span 6; }
+.card-third { grid-column: span 4; }
+
+/* ESTRUTURA DOS 5 BREAKPOINTS (MOBILE-FIRST) */
+
+/* 1. Smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .container-grid-12 { grid-template-columns: 1fr; }
+    .sidebar, .main-content, .card-half, .card-third { grid-column: span 1; }
+}
+
+/* 2. Tablets Retrato (min-width: 481px) e (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container-grid-12 { grid-template-columns: repeat(6, 1fr); }
+    .sidebar { grid-column: span 6; }
+    .main-content { grid-column: span 6; }
+    .card-half, .card-third { grid-column: span 3; }
+}
+
+/* 3. Tablets Paisagem / Laptops (min-width: 769px) e (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-grid-12 { grid-template-columns: repeat(12, 1fr); }
+    .sidebar { grid-column: span 4; }
+    .main-content { grid-column: span 8; }
+}
+
+/* 4. Desktops Padrão (min-width: 1025px) e (max-width: 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container-grid-12 { max-width: 1140px; }
+}
+
+/* 5. Desktops Panorâmicos (min-width: 1441px) */
+@media (min-width: 1441px) {
+    .container-grid-12 { max-width: 1400px; gap: var(--espaco-xl); }
+}
 
